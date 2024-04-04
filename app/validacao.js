@@ -1,3 +1,5 @@
+const tocarSom = new Audio('./som-vitoria.mp3')
+
 function vericaSeChutePossuiValorValido(chute) {
     const numero = +chute
 
@@ -13,6 +15,7 @@ function vericaSeChutePossuiValorValido(chute) {
     }
 
     if (numero === numeroSecreto) {
+        tocarSom.play();
         document.body.innerHTML = `
             <h2 class="numero-chute">Você acertou!</h2>
             <h3 class="numero-chute">O número secreto era ${numeroSecreto}</h3>
