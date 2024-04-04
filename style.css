@@ -1,11 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
 
 :root {
-     --font-family: "Nunito", sans-serif;
-     --bg-color: #00adb5;
-     --primary-color: #eeeeee;
+    --font-family: "Nunito", sans-serif;
+    --bg-color: #00adb5;
+    --primary-color: #eeeeee;
+    --bt-jogar-novamente-cor: #31363F;
 }
 
+@keyframes inicio {
+    0% {
+        scale: 0.5;
+    }
+}
 body {
     background-color: var(--bg-color);
     color: var(--primary-color);
@@ -17,19 +23,23 @@ body {
     text-align: center;
     margin: 0;
     font-family: var(--font-family);
+    animation: inicio 1s;
 }
 
 h1 {
     font-size: 5em;
+    animation: inicio 1s;
 }
 
 h2 {
     font-size: 5em;
+    animation: inicio 1s;
 }
 
 h3 {
     font-size: 2em;
     margin-top: 20px;
+    animation: inicio 1s;
 }
 
 .mensagem {
@@ -47,8 +57,24 @@ h3 {
 
 .btn-jogar {
     padding: 8px 15px;
-    border: 0;
-    background: var(--primary-color);
-    border-radius: 5px;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    background: var(--bt-jogar-novamente-cor);
+    border-radius: 50px;
     margin-top: 20px;
+}
+
+.btn-jogar:active {
+    scale: 0.9;
+    transition: 80ms;
+}
+
+.numero-chute {
+    animation: inicio 1s;
+}
+
+@media (max-width: 490px) {
+    h1 {
+        font-size: 3em;
+    }
 }
